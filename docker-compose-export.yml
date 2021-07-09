@@ -1,0 +1,17 @@
+version: '2.3'
+
+services:
+
+  rev-export:
+    image: $RNODE_IMAGE
+    container_name: rev-export
+    entrypoint: /opt/docker/bin/state-balance-main
+    command:
+      -XX:MaxDirectMemorySize=200m
+      -XX:MaxRAMPercentage=65
+      --block-hash $BLOCK_HASH
+      --data-dir /var/lib/rnode
+      --output-dir /export
+    volumes:
+      - ./data/rnode:/var/lib/rnode
+      - ./export:/export
