@@ -36,8 +36,11 @@ services:
       --api-max-blocks-limit=100
     ports:
       - $HOST_IP:40400:40400
-      - $HOST_IP:40402:40402
-      - $HOST_IP:40405:40405
+      - $HOST_IP:40401:40401
+      - $HOST_IP:40403:40403
+      # Internal
+      - 127.0.0.1:40402:40402
+      - 127.0.0.1:40405:40405
       - 127.0.0.1:$JMX_PORT:$JMX_PORT
     volumes:
       - ./data/rnode:/var/lib/rnode
