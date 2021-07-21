@@ -7,7 +7,7 @@
     "rnode-generate": "rnode-grpc --rnode-version v0.12.0",
     "postinstall": "npm run rnode-generate",
     "tap": "tap",
-    "test": "tap -- genesis/*.mjs"
+    "test": "tap -Rtap genesis/*.mjs"
   },
   "author": "Tomislav Grospić",
   "license": "MIT",

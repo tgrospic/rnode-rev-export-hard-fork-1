@@ -2,7 +2,7 @@ import R from 'ramda'
 import { test } from 'tap'
 import { readOrDownloadFile, parseStakeFromBlock, parseRevWalletsFromBlock, parseRevWallets, mintedREVs, C } from '../common/index.mjs'
 
-test('genesis 908400 block wallets (after Hard Fork 1)', async t => {
+test(`${C.BLUE}Genesis 908400 block and wallets file validation (after Hard Fork 1)${C.NC}`, async t => {
   const genesisBlockUrl  = `https://observer-eu.services.mainnet.rchain.coop/api/block/4628fd789319c66a42d228fe3c87dcc822732a1d6c726d829870570edb372d05`
   const genesisBlockFile = `data/genesis-908400-block-raw.json`
 
@@ -32,8 +32,6 @@ test('genesis 908400 block wallets (after Hard Fork 1)', async t => {
 
   // Calculate total stake
   const totalStake = R.reduce((acc, [,rev]) => acc + rev, 0n, stakes)
-
-  console.log(`${C.BLUE}Genesis 908400 block and wallets file validation${C.NC}`)
 
   console.log(`Minted REVs: ${C.GREEN}${mintedREVs}${C.NC} <-- created in genesis 0 block`)
 

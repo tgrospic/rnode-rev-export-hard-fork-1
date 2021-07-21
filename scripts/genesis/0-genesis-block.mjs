@@ -2,7 +2,7 @@ import R from 'ramda'
 import { test } from 'tap'
 import { readOrDownloadFile, parseStakeFromBlock, parseRevWalletsFromBlock, parseEthWallets, mintedREVs, C } from '../common/index.mjs'
 
-test('genesis 0 block wallets (main net start)', async t => {
+test(`${C.BLUE}Genesis 0 block and wallets file validation (main net start)${C.NC}`, async t => {
   const genesisBlockUrl  = `https://observer-full.mainnet.dev.rchain.coop/api/block/986addc3dfa12b179eaa40e38d77aec3da0530b9ca2243271436a135055229dd`
   const genesisBlockFile = `data/genesis-0-block-raw.json`
 
@@ -32,8 +32,6 @@ test('genesis 0 block wallets (main net start)', async t => {
 
   // Calculate total stake
   const totalStake = R.reduce((acc, [,rev]) => acc + rev, 0n, stakes)
-
-  console.log(`${C.BLUE}Genesis 0 block and wallets file validation${C.NC}`)
 
   t.same(blockWallets.length, fileWallets.length, `Wallets count should be the same from block and wallets file`)
   console.log(`Count      : ${C.GREEN}${blockWallets.length}${C.NC}`)
