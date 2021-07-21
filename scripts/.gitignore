@@ -1,0 +1,4 @@
+node_modules/
+rnode-grpc-gen/
+data/
+.nyc_output
