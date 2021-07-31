@@ -63,7 +63,7 @@ runcmd:
   - "curl https://raw.githubusercontent.com/tgrospic/rnode-rev-export-hard-fork-1/master/install.sh | bash"
 ```
 
-## Expected dick size of the databases after full sync
+## Expected disk size of the databases after full sync
 
 Because of long period of quarantine in PoS contract, large amout of blocks are downloaded. One of the reasons for Hard Fork 1.
 
