@@ -1,2 +1,2 @@
 language = "nix"
-run = "nix-shell"
+run = "cd scripts && npm i && npm test"
