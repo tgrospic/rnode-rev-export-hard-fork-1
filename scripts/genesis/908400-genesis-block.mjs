@@ -3,7 +3,7 @@ import { test } from 'tap'
 import { readOrDownloadFile, parseStakeFromBlock, parseRevWalletsFromBlock, parseRevWallets, mintedREVs, C } from '../common/index.mjs'
 
 test(`${C.BLUE}Genesis 908400 block and wallets file validation (after Hard Fork 1)${C.NC}`, async t => {
-  const genesisBlockUrl  = `https://observer-eu.services.mainnet.rchain.coop/api/block/4628fd789319c66a42d228fe3c87dcc822732a1d6c726d829870570edb372d05`
+  const genesisBlockUrl  = `https://observer-exch2.services.mainnet.rchain.coop/api/block/4628fd789319c66a42d228fe3c87dcc822732a1d6c726d829870570edb372d05`
   const genesisBlockFile = `data/genesis-908400-block-raw.json`
 
   const walletsFileUrl = `https://raw.githubusercontent.com/rchain/rchain/1c4f83896a09d06a08fcbc19e3534bf7debe84c9/wallets.txt`
