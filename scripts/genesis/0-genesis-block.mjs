@@ -1,4 +1,4 @@
-import R from 'ramda'
+import * as R from 'ramda'
 import { test } from 'tap'
 import { readOrDownloadFile, parseStakeFromBlock, parseRevWalletsFromBlock, parseEthWallets, mintedREVs, C } from '../common/index.mjs'
 

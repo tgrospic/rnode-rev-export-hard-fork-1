@@ -1,4 +1,4 @@
-import R from 'ramda'
+import * as R from 'ramda'
 import fs from 'fs/promises'
 import fetch from 'node-fetch'
 import { Agent } from 'https'
